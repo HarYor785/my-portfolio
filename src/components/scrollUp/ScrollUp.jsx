@@ -8,9 +8,9 @@ const ScrollUp = () => {
         else scrollUp.classList.remove("show-scroll")
     })
   return (
-    <a href="#" className="scrollup">
+    <button className="scrollup">
         <i className="uil uil-arrow-up scrollup__icon"></i>
-    </a>
+    </button>
   )
 }
 

@@ -10,10 +10,10 @@ const WorkItems = ({item}) => {
         <h3 className="work__title">{item.title}</h3>
         <span className="work__subtitle">{item.subTitle}</span>
         <div className="work__buttons">
-          <a href={item.link} className="work__button" target='_blank'>
+          <a href={item.link} className="work__button" target='_blank' rel='noreferrer'>
             Demo <i className="bx bx-right-arrow-alt work__button-icon"></i>
           </a>
-          <a href={item.github} className='work__button' target='_blank'>
+          <a href={item.github} className='work__button' target='_blank' rel='noreferrer'>
             <i class='bx bxl-github work__button-icon'></i>
           </a>
         </div>
