@@ -71,6 +71,15 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <Script
+          id="google-search-console"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              <meta name="google-site-verification" content="acGvkRy1Wgq-UIKuemd63fafw8bkB-UGKmCSBpltnd8" />
+            `,
+          }}
+        />
+        <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
