@@ -67,7 +67,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Let’s Build Something Exceptional
           </h2>
 
@@ -87,7 +87,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100"
+            className="bg-white md:p-10 p-5 rounded-3xl shadow-xl border border-gray-100"
           >
             <div className="space-y-6">
 
@@ -163,7 +163,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="md:space-y-8 space-y-4"
           >
             {[
               {

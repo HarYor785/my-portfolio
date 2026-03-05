@@ -34,7 +34,7 @@ export default function About() {
         bg-linear-to-r from-[#f6f7fb] to-[#eef2f9]
       "
     >
-      <div className="max-w-7xl mx-auto py-16 px-6 md:px-16 grid lg:grid-cols-2 gap-20 items-start">
+      <div className="max-w-7xl mx-auto md:py-16 py-8 px-4 md:px-16 grid lg:grid-cols-2 gap-20 items-start">
         
         {/* LEFT */}
         <div>
@@ -112,7 +112,7 @@ export default function About() {
               className="
                 bg-white/60 backdrop-blur-lg
                 border border-white/40
-                p-8 rounded-2xl
+                md:p-8 p-5 rounded-2xl
                 shadow-md
                 transition duration-300
                 transform-gpu

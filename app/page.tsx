@@ -10,7 +10,7 @@ import Contact from "@/components/layouts/Contact";
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col">
+    <main className="relative w-full flex flex-col">
       <CursorGlow/>
       <Hero/>
       <About/>

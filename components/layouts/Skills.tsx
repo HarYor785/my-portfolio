@@ -42,7 +42,7 @@ export default function Skills() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     className="
-                    relative p-8 rounded-2xl
+                    relative md:p-8 p-5 rounded-2xl
                     border border-gray-200
                     bg-white/70 backdrop-blur-xl
                     shadow-lg hover:shadow-2xl

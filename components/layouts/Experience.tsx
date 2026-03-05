@@ -33,7 +33,7 @@ export default function ExperienceSection() {
         <div className="space-y-20 relative">
 
             {/* Timeline Line */}
-            <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue-600 to-purple-600" />
+            <div className="absolute md:left-6 left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue-600 to-purple-600" />
 
             {experiences.map((exp, index) => (
             <motion.div
@@ -42,15 +42,15 @@ export default function ExperienceSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.15 }}
                 viewport={{ once: true }}
-                className="relative pl-16 group"
+                className="relative md:pl-16 pl-5 group"
             >
 
                 {/* Timeline Node */}
-                <div className="absolute left-[19px] top-2 w-4 h-4 rounded-full bg-blue-600 shadow-lg" />
+                <div className="absolute md:left-[19px] -left-1 top-2 w-4 h-4 rounded-full bg-blue-600 shadow-lg" />
 
                 <div
                 className="
-                    p-10 rounded-3xl
+                    md:p-10 p-4 rounded-3xl
                     border border-gray-200
                     bg-white/70 backdrop-blur-xl
                     shadow-lg hover:shadow-2xl

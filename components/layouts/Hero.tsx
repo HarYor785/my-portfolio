@@ -12,7 +12,8 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden bg-gradient-to-r from-[#f6f7fb] to-[#eaf2ff] flex items-center">
+    <section id="home" 
+    className="relative w-full min-h-screen overflow-hidden bg-gradient-to-r from-[#f6f7fb] to-[#eaf2ff] flex items-center">
         <Navbar/>
       {/* Cursor glow */}
       <CursorGlow />
@@ -98,12 +99,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="absolute right-4 top-32 z-20 rounded-2xl 
-            bg-white/80 px-6 py-3 shadow-xl backdrop-blur-md"
+            className="absolute right-4 top-52 z-20 rounded-2xl 
+            bg-white/80 px-6 py-3 shadow-xl backdrop-blur-md md:top-32"
           >
             <div className="flex items-center gap-4">
                 <p className="text-3xl font-bold text-indigo-600">4+</p>
-                <p className="text-base text-gray-500"><strong>Years</strong> <br/> Happy Clients</p>
+                <p className="text-base text-gray-500 font-lexend"><strong>Years</strong> <br/> of Experience</p>
             </div>
           </motion.div>
         </div>

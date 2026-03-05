@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
 import AnimatedButton from './ui/AnimatedBtn';
 
@@ -6,6 +6,8 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
 
   useEffect(() => {
     const sectionIds = [
@@ -38,10 +40,28 @@ function Navbar() {
 
     return () => observer.disconnect();
   }, []);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const links = ["Home", "About", "Skills", "Portfolio", "Experience", "Contact"];
@@ -103,6 +123,7 @@ function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
+            ref={menuRef}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}

@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 export default function LuxuryEducationSection() {
   return (
-    <section id="education" className="relative bg-linear-to-r from-[#f6f7fb] to-[#eef2f9]">
+    <section id="education" className=" w-full overflow-hidden relative bg-linear-to-r from-[#f6f7fb] to-[#eef2f9]">
 
       {/* Luxury Background Glow */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white via-purple-50 to-white opacity-60" />
 
-        <div className="py-16 px-6 md:px-16 max-w-7xl mx-auto">
+        <div className="py-16 px-4 md:px-16 max-w-7xl mx-auto">
             {/* Header */}
             <motion.div
                 initial={{ opacity: 0, y: 60 }}
@@ -40,7 +40,7 @@ export default function LuxuryEducationSection() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     className="
-                        relative p-14 rounded-[2.5rem]
+                        relative md:p-14 p-6 rounded-[2.5rem]
                         border border-gray-200
                         bg-white/70 backdrop-blur-xl
                         shadow-2xl
@@ -74,7 +74,7 @@ export default function LuxuryEducationSection() {
                 </div>
 
                 {/* Certifications Stack Cards */}
-                <div className="space-y-8 mt-10 lg:mt-20">
+                <div className="space-y-8 md:mt-10 ">
                 {certifications.map((cert, index) => (
                     <motion.div
                     key={cert.title}
@@ -83,7 +83,7 @@ export default function LuxuryEducationSection() {
                     transition={{ delay: index * 0.15 }}
                     viewport={{ once: true }}
                     className="
-                        group relative p-10 rounded-[2rem]
+                        group relative md:p-10 p-4 rounded-[2rem]
                         bg-gradient-to-br from-white to-gray-50
                         border border-gray-200
                         shadow-lg
