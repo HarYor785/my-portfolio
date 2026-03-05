@@ -60,6 +60,9 @@ export const metadata: Metadata = {
       "Full-stack developer building scalable digital experiences.",
     images: ["/profile.png"],
   },
+  verification: {
+    google: 'acGvkRy1Wgq-UIKuemd63fafw8bkB-UGKmCSBpltnd8',
+  },
 };
 
 export default function RootLayout({
@@ -70,15 +73,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <Script
-          id="google-search-console"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              <meta name="google-site-verification" content="acGvkRy1Wgq-UIKuemd63fafw8bkB-UGKmCSBpltnd8" />
-            `,
-          }}
-        />
         <Script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
